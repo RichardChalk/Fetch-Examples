@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Richard",
+        "email": "richard.chalk@systementor.se"
+    },
+    {
+        "id": 2,
+        "name": "Stefan",
+        "email": "stefan.holmberg@systementor.se"
+    },
+    {
+        "id": 3,
+        "name": "Scooby Doo",
+        "email": "scooby@systementor.se"
+    }
+]
