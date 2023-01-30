@@ -164,7 +164,7 @@ function getJsonApiDomOneProduct() {
     fetch("https://dummyjson.com/products/2")
         .then((response) => response.json())
         .then((data) => {
-            let output = `<h2>User</h2>
+            let output = `<h2>Product</h2>
                 <ul class="list-group mb-3">
                     <li class="list-group-item">ID: ${data.id}</li>
                     <li class="list-group-item">Name: ${data.title}</li>
@@ -190,21 +190,21 @@ function getJsonApiDomOneProduct() {
 
 document.getElementById("addPost").addEventListener("submit", addPost)
 
-// Button 'Post'
+// Button 9. 'Post'
 // Kommer inte att lägga till i api databasen "på riktigt"
 // Men det är så här att syntaxen ser ut.
 function addPost(e) {
     e.preventDefault()
 
-    let title = document.getElementById("title").value
-    let body = document.getElementById("body").value
+    let titleHTML = document.getElementById("title").value
+    let bodyHTML = document.getElementById("body").value
 
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            title: title,
-            body: body
+            title: titleHTML,
+            body: bodyHTML
         })
     })
         .then(res => res.json())
