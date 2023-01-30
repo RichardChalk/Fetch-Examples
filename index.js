@@ -20,6 +20,7 @@ function getTextLocalConsole() {
                 })
         })
 }
+
 // ////////////////////////////////////////////////////////////////////////////////////////////
 // Button 2 Här använder jag en arrow metod (lite cleaner) för att skriva till consolen
 document.getElementById("getTextLocalConsoleArrow").addEventListener("click", getTextLocalConsoleArrow)
@@ -130,20 +131,20 @@ function getJsonApiConsole() {
 // Metod 3 Insert to DOM (ALL products)
 // https://dummyjson.com/docs/products
 
+// Button 7
 document.getElementById("getJsonApiDom").addEventListener("click", getJsonApiDom)
 
-// Button 7
 function getJsonApiDom() {
     fetch("https://dummyjson.com/products")
         .then((response) => response.json())
         .then((data) => {
-            let output = "<h2>Users</h2>"
+            let output = "<h2>Products</h2>"
             data.products.forEach((prod) => {
                 output += `
                 <div class="card card-body mb-3">
                     <h3>ID: ${prod.id}</h3>
                     <p>Name: ${prod.title}</p>
-                    <p>Email: ${prod.description}</p>
+                    <p>Description: ${prod.description}</p>
                 </div>
                 `
                 document.getElementById("output").innerHTML = output;
