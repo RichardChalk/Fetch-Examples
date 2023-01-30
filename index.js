@@ -8,7 +8,7 @@
 // Text från en fil som ligger lokalt
 // Text från en fil som ligger lokalt
 
-// Metod 1 Här använder jag en vanlig metod för att skriva till consolen
+// Button 1 Här använder jag en vanlig metod för att skriva till consolen
 document.getElementById("getTextLocalConsole").addEventListener("click", getTextLocalConsole)
 
 function getTextLocalConsole() {
@@ -21,7 +21,7 @@ function getTextLocalConsole() {
         })
 }
 // ////////////////////////////////////////////////////////////////////////////////////////////
-// Metod 2 Här använder jag en arrow metod (lite cleaner) för att skriva till consolen
+// Button 2 Här använder jag en arrow metod (lite cleaner) för att skriva till consolen
 document.getElementById("getTextLocalConsoleArrow").addEventListener("click", getTextLocalConsoleArrow)
 
 function getTextLocalConsoleArrow() {
@@ -31,7 +31,7 @@ function getTextLocalConsoleArrow() {
         .catch((err) => console.log(err))
 }
 // ////////////////////////////////////////////////////////////////////////////////////////////
-// Metod 3 Insert to DOM (arrow method)
+// Button 3 Insert to DOM (arrow method)
 document.getElementById("getTextLocalDom").addEventListener("click", getTextLocalDom)
 
 function getTextLocalDom() {
@@ -56,7 +56,7 @@ function getTextLocalDom() {
 
 document.getElementById("getJsonLocalConsole").addEventListener("click", getJsonLocalConsole)
 
-// ...för att skriva till consolen
+// Button 4 ...för att skriva till consolen
 function getJsonLocalConsole() {
     fetch("users.json")
         .then((resp) => resp.json())
@@ -66,7 +66,7 @@ function getJsonLocalConsole() {
 }
 
 document.getElementById("getJsonLocalDom").addEventListener("click", getJsonLocalDom)
-// Metod 2 Insert to DOM
+// Button 5 Insert to DOM
 function getJsonLocalDom() {
     fetch("users.json")
         .then((response) => response.json())
@@ -101,7 +101,7 @@ function getJsonLocalDom() {
 
 document.getElementById("getJsonApiConsole").addEventListener("click", getJsonApiConsole)
 
-// Method 1...för att skriva till consolen
+// Button 6...för att skriva till consolen
 function getJsonApiConsole() {
     fetch("https://jsonplaceholder.typicode.com/posts")
         .then((resp) => resp.json())
@@ -132,6 +132,7 @@ function getJsonApiConsole() {
 
 document.getElementById("getJsonApiDom").addEventListener("click", getJsonApiDom)
 
+// Button 7
 function getJsonApiDom() {
     fetch("https://dummyjson.com/products")
         .then((response) => response.json())
@@ -153,7 +154,7 @@ function getJsonApiDom() {
         })
 }
 
-// Metod 3 Insert to DOM (ONE products)
+// Button 8 Insert to DOM (ONE products)
 // https://dummyjson.com/docs/products
 
 document.getElementById("getJsonApiDomOneProduct").addEventListener("click", getJsonApiDomOneProduct)
@@ -188,6 +189,7 @@ function getJsonApiDomOneProduct() {
 
 document.getElementById("addPost").addEventListener("submit", addPost)
 
+// Button 'Post'
 // Kommer inte att lägga till i api databasen "på riktigt"
 // Men det är så här att syntaxen ser ut.
 function addPost(e) {
